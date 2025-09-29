@@ -1,0 +1,23 @@
+[project]
+name = "poem_writer"
+version = "0.1.0"
+description = "poem-writer using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "crewai[tools]>=0.201.1,<1.0.0"
+]
+
+[project.scripts]
+poem_writer = "poem_writer.main:run"
+run_crew = "poem_writer.main:run"
+train = "poem_writer.main:train"
+replay = "poem_writer.main:replay"
+test = "poem_writer.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"
